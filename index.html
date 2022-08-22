@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather-app</title>
+        <link rel="stylesheet" href="./src/index.scss" />
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./style/_app.scss">
+        <link rel="stylesheet" href="./style/_settings.scss">
+        <script defer src="script.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+    </head>
+    <body>
+        <main>
+            <div class="dynamicFav">
+                <ul id="fav"></ul>
+            </div>
+            <div class="header">
+                <h1>Weather-app</h1>
+                <form action="">
+                    <span id="star"><i class="fa-solid fa-star"></i></span>
+                    <input
+                        type="text"
+                        id="weatherSearch"
+                        placeholder="Enter city"
+                        autocomplete="off"
+                    />
+                    <input type="submit" value="GO" id="submit" />
+                </form>
+            </div>
+            <div class="principal-information">
+                <div id="result"></div>
+                <div class="today">
+                    <ul id="one"></ul>
+                </div>
+            </div>
+            <canvas
+                id="graph"
+                width="400"
+                height="100"
+                style="color: white"
+            ></canvas>
+            <button id="update">update graph</button>
+            <div class="rest-of-the-days">
+                <ul id="two" class="ul-day"></ul>
+                <ul id="three" class="ul-day"></ul>
+                <ul id="four" class="ul-day"></ul>
+                <ul id="five" class="ul-day"></ul>
+            </div>
+        </main>
+        
+    </body>
+</html>
